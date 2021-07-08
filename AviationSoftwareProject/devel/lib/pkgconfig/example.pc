@@ -1,0 +1,8 @@
+prefix=/home/yujung/example/devel
+
+Name: example
+Description: Description of example
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/yujung/example/devel/lib 
+Requires: 
