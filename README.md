@@ -26,28 +26,56 @@ With the experience of using an open source, I will be able to quickly adapt and
 * [QGC Calibration] Sensor Calibration
   * Calibrate of *Compass, Gyroscope, Accelerometer, level horizonal sensor* of drone.
 
-
 # Software
-<img src="" width="400" higeht="200">
 
 (1) Interworking between *H/W* and *S/W*
-* The safety of operation is important because drones are equipped with various sensors and the influence of the external environment is significant. So, we did simulation in a virtual *Gazebo* environment before the flight.
+
+<img src="https://user-images.githubusercontent.com/26537107/125024039-ff7f3e00-e0ba-11eb-9f03-b270a1b62834.jpg" width="400" higeht="200">
+
+
 * Among the several sensors connected to *Pixhawk*, the flight status was wirelessly transmitted through *Telemetry* used to communicate with surrounding devices, between the drone and the *QGC* system.
 * Data was sent to *ROS* via *TCP socket* communication between *Android* and *ROS* nodes.
 * Within *ROS*, the position of the drone was controlled by transferring data in a *Pubscribe/Subscribe* manner between two nodes.
 
 (2) GUI Design
 
+<img src="https://user-images.githubusercontent.com/26537107/125024044-01e19800-e0bb-11eb-84c7-645a158f067a.jpg" width="150" higeht="350">
+
+<img src="https://user-images.githubusercontent.com/26537107/125024050-03ab5b80-e0bb-11eb-8247-8d2110659f3e.jpg" width="150" higeht="350">
+
 (3) Gazebo Simulation
 
-# 
+<img src="https://user-images.githubusercontent.com/26537107/125024056-05751f00-e0bb-11eb-9c58-e4c30c4ee63f.png" width="400" higeht="200">
+
+* The safety of operation is important because drones are equipped with various sensors and the influence of the external environment is significant. So, we did simulation in a virtual *Gazebo* environment before the flight.
+
+# Test Flight
+
+<img src="https://user-images.githubusercontent.com/26537107/125024060-073ee280-e0bb-11eb-935d-a326a99607e2.jpg" width="200" higeht="200">
+
+<img src="https://user-images.githubusercontent.com/26537107/125024069-0d34c380-e0bb-11eb-9b38-d5afa35877a0.jpg" width="200" higeht="200">
 
 
+# Achievment
+* Receive input of the **distance** and **direction**.
 
+* Maintain **hovering status** if no other application input is available.
 
+* Press the **Back button** to return to the previous position.
 
+* Press the **Home button** to return to the initial start position.
 
+* Select the **clock and counter-clockwise direction** and **rotate** 90 degrees relative to the z-axis.
 
+* Press the **Up-Down button** to control the height.
 
+* Display the **current position** in the application.
+   * Highlight position numbers changed for 0.3 seconds each time the distance changes
 
+* For safety, restrict the parameter from moving more than a certain distance.
+
+* Event does not go over when double clicks are made in less than 3 seconds.
+   * Due to the slow response rate of the drone, multiple clicks of the button in a row can cause the drone to move rapidly.
+
+* By sending a toast message from the application, all **errors and exceptions are visible** to the user 
 
