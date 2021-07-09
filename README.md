@@ -58,24 +58,15 @@ With the experience of using an open source, I will be able to quickly adapt and
 
 # Achievment
 * Receive input of the **distance** and **direction**.
-
 * Maintain **hovering status** if no other application input is available.
-
 * Press the **Back button** to return to the previous position.
-
 * Press the **Home button** to return to the initial start position.
-
 * Select the **clock and counter-clockwise direction** and **rotate** 90 degrees relative to the z-axis.
-
 * Press the **Up-Down button** to control the height.
-
 * Display the **current position** in the application.
    * Highlight position numbers changed for 0.3 seconds each time the distance changes
-
 * For safety, restrict the parameter from moving more than a certain distance.
-
 * Event does not go over when double clicks are made in less than 3 seconds.
    * Due to the slow response rate of the drone, multiple clicks of the button in a row can cause the drone to move rapidly.
-
 * By sending a toast message from the application, all **errors and exceptions are visible** to the user 
 
